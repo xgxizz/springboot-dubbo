@@ -1,0 +1,29 @@
+
+dubbo:
+  #应用名
+  application:
+    id: springboot-dubbo-provider
+    name: springboot-dubbo-provider
+  #协议
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880
+  #扫描路径
+  scan:
+    base-packages: com.xu.provider.service
+  registry:
+    id: hello-registry
+    address: zookeeper://192.168.50.111:2181
+    #username: xxxx 设置用户名密码，如果有的话
+    #password: xxxxx
+
+#端口号
+server:
+  port: 8686
+
+#设置版本
+hello:
+  service:
+    version: 1.0.0
+
